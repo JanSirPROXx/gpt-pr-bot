@@ -1,7 +1,6 @@
 {
   "name": "ai-pr-review-action",
   "private": true,
-  "type": "module",
   "scripts": {
     "build": "ncc build src/index.js -o dist"
   },
