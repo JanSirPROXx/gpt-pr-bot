@@ -5,7 +5,6 @@ const core = require("@actions/core");
 const { Octokit } = require("@octokit/rest");
 const OpenAI = require("openai").default;
 
-// ---------- helpers ----------
 function readOptionalFile(filePath) {
   try {
     return fs.readFileSync(path.resolve(process.cwd(), filePath), "utf8");
@@ -102,7 +101,6 @@ async function postPrComment(octokit, owner, repo, prNumber, body) {
   });
 }
 
-// ---------- main ----------
 async function run() {
   const openaiKey = core.getInput("openai_api_key", { required: true });
   const model = core.getInput("model") || "gpt-4.1-mini";
