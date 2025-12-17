@@ -1,0 +1,15 @@
+{
+  "name": "ai-pr-review-action",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "ncc build src/index.js -o dist"
+  },
+  "dependencies": {
+    "@octokit/rest": "^21.0.0",
+    "openai": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.0"
+  }
+}

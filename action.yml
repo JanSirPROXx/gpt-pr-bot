@@ -1,0 +1,24 @@
+name: AI PR Review Bot
+description: Reviews GitHub pull requests using OpenAI
+author: Jan Bichsel
+
+inputs:
+  openai_api_key:
+    description: OpenAI API key
+    required: true
+  model:
+    description: OpenAI model
+    required: false
+    default: gpt-4.1-mini
+  review_file:
+    description: Path to Review.md
+    required: false
+    default: Review.md
+  max_files:
+    description: Max number of files to review
+    required: false
+    default: "20"
+
+runs:
+  using: node20
+  main: dist/index.js
